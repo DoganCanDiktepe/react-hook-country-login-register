@@ -5,6 +5,5 @@ module.exports = merge(common, {
     mode: 'production',
     devServer: {
         contentBase: './',
-        historyApiFallback: true,
     }
 });

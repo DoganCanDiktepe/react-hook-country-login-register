@@ -1,11 +1,11 @@
 const express = require('express')
-const path = require('path')
 const PORT = process.env.PORT || 5000
 app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.get('*', function (req, res) {
-    res.render('index', { locals: { title: 'Welcome!' } });
-});
-
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(resolve(process.cwd(), 'public')))
+    app.get('*', (req, res) => {
+        res.sendFile(resolve(process.cwd(), 'public/index.html'))
+    })
+}
 app.listen(PORT);

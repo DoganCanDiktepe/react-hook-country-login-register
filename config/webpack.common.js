@@ -5,6 +5,9 @@ module.exports = {
     entry: {
         app: path.join(__dirname, "../src", "index.js"),
     },
+    devServer: {
+        historyApiFallback: true,
+    },
     module: {
         rules: [
             {
