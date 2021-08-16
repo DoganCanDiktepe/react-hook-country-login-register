@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Router, Route, Redirect, BrowserRouter, Switch } from "react-router-dom"
+import { Router, Route, Redirect, Switch } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
 import { history } from "../../_helpers"
